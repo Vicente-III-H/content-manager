@@ -1,0 +1,13 @@
+{
+    "name": "page content manager",
+    "version": "0.0.0",
+
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": ["https://*/*"],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    
+    "manifest_version": 3
+}

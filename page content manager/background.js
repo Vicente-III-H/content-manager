@@ -12,6 +12,11 @@ chrome.tabs.onUpdated.addListener((tabId, changes, tab) => {
                 target: {tabId: tabId},
                 files: ["content-managers/google-search.js"]
             });
+        } else if (tabHostname.href.includes("www.biblegateway.com/passage")) {
+            chrome.scripting.executeScript({
+                target: {tabId: tabId},
+                files: ["content-managers/biblegateway.js"]
+            });
         }
     }
 })
